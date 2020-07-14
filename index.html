@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>JS 3</title>
+</head>
+
+<body>
+
+    <div class="mainHeaderContainer">
+        <h1 class="mainHeader">Avital's Homework - JS 3</h1>
+    </div>
+
+    <div class="answersContainer">
+
+
+        <!-- QS 1 -->
+        <div class="qsContainer">
+
+            <!-- Header & description-->
+            <p class="qsHeader">QS 1</p>
+            <p class="qsDescription">Enter ID number to check if legal</p>
+
+            <!-- inputs -->
+            <input id="qs1NumInput" type="text" placeholder="Enter an ID number">
+            <button id="qs1Submit" class="btnSend" onclick="checkID()">Send</button>
+
+            <!-- result -->
+            <p class="qsResult" id="qs1Result"></p>
+
+        </div>
+
+        <hr>
+
+        <!-- QS 2 -->
+        <div class="qsContainer">
+
+            <!-- Header & description-->
+            <p class="qsHeader">QS 2</p>
+            <p class="qsDescription">Enter a number to check if prime</p>
+
+            <!-- inputs -->
+            <input id="qs2NumInput" type="text" placeholder="Enter a number">
+            <button id="qs2Submit" class="btnSend" onclick="isPrime()">Send</button>
+
+            <!-- result -->
+            <p class="qsResult" id="qs2Result"></p>
+
+        </div>
+        <hr>
+
+        <!-- QS 3 -->
+        <div class="qsContainer">
+
+            <!-- Header & description-->
+            <p class="qsHeader">QS 3</p>
+            <p class="qsDescription">Enter a string to check for capital letters</p>
+
+
+            <!-- inputs -->
+            <input id="qs3StrInput" type="text" placeholder="Enter a string">
+            <button id="qs3Submit" class="btnSend" onclick="addSpace()">Send</button>
+
+            <!-- result -->
+            <p class="qsResult" id="qs3Result"></p>
+
+        </div>
+        <hr>
+
+        <!-- QS 4 -->
+        <div class="qsContainer">
+
+            <!-- Header & description-->
+            <p class="qsHeader">QS 4</p>
+            <p class="qsDescription">Enter some numbers, enter a negative number to get a result</p>
+
+            <!-- inputs -->
+            <input id="qs4NumInput" type="number" placeholder="Enter a number">
+            <button id="qs4Submit" class="btnSend" onclick="printBiggerNum()">Send</button>
+
+            <!-- result -->
+            <p class="qsResult" id="qs4Result"></p>
+
+        </div>
+
+        <hr>
+
+        <!-- QS 5 -->
+        <div class="qsContainer">
+
+            <!-- Header & description-->
+            <p class="qsHeader">QS 5</p>
+            <p class="qsDescription">Enter two string to check how many string apears in the other string</p>
+
+            <!-- inputs -->
+            <input id="qs5Str1Input" type="text" placeholder="Enter a string1">
+            <input id="qs5Str2Input" type="text" placeholder="Enter a string2">
+            <button id="qs5Submit" class="btnSend" onclick="countInnerString()">Send</button>
+
+            <!-- result -->
+            <p class="qsResult" id="qs5Result"></p>
+
+        </div>
+
+        <hr>
+
+        <!-- QS 6 -->
+        <div class="qsContainer">
+
+            <!-- Header & description-->
+            <p class="qsHeader">QS 6</p>
+            <p class="qsDescription">Enter a string to sort it</p>
+
+            <!-- inputs -->
+            <input id="qs6StrInput" type="text" placeholder="Enter a string">
+            <button id="qs6Submit" class="btnSend" onclick="sortStr()">Send</button>
+
+            <!-- result -->
+            <p class="qsResult" id="qs6Result"></p>
+
+        </div>
+
+        <hr>
+
+        <!-- QS 7 -->
+        <div class="qsContainer">
+
+            <!-- Header & description-->
+            <p class="qsHeader">QS 7</p>
+            <p class="qsDescription">Simple calculator</p>
+
+            <div class="calcContainer">
+
+                <!-- buttons -->
+                <div class="row calcResult">
+                    <p id="calcRes" class="col-12 calcResultTxt">---</p>
+                </div>
+                <div class="row calcButtonRow">
+                    <button class="col-3 calcButton" onclick="addToCalc(1)">1</button>
+                    <button class="col-3 calcButton" onclick="addToCalc(2)">2</button>
+                    <button class="col-3 calcButton" onclick="addToCalc(3)">3</button>
+                    <button class="col-3 calcButton" onclick="addToCalc('+')">+</button>
+                </div>
+                <div class="row calcButtonRow">
+                    <button class="col-3 calcButton" onclick="addToCalc(4)">4</button>
+                    <button class="col-3 calcButton" onclick="addToCalc(5)">5</button>
+                    <button class="col-3 calcButton" onclick="addToCalc(6)">6</button>
+                    <button class="col-3 calcButton" onclick="addToCalc('-')">-</button>
+                </div>
+                <div class="row calcButtonRow">
+                    <button class="col-3 calcButton" onclick="addToCalc(7)">7</button>
+                    <button class="col-3 calcButton" onclick="addToCalc(8)">8</button>
+                    <button class="col-3 calcButton" onclick="addToCalc(9)">9</button>
+                    <button class="col-3 calcButton" onclick="addToCalc('*')">*</button>
+                </div>
+                <div class="row calcButtonRow">
+                    <button class="col-3 calcButton" onclick="addToCalc('c')">c</button>
+                    <button class="col-3 calcButton" onclick="addToCalc(0)">0</button>
+                    <button class="col-3 calcButton" onclick="addToCalc('=')">=</button>
+                    <button class="col-3 calcButton" onclick="addToCalc('/')">/</button>
+                </div>
+
+            </div>
+        </div>
+
+        <hr>
+
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="scripts.js"></script>
+</body>
+
+</html>
